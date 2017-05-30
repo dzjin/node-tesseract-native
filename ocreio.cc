@@ -250,7 +250,7 @@ void OcrEio::EIO_Ocr(uv_work_t *req)
           std::string text(ocrResult);
 
           result += "{ \"index\":" + index + ",\"x\":" + x + ",\"y\":" + y + ",\"w\":" + w +
-                    ",\"h\":" + h + ",\"conf\":" + confidence + ",\"text\":" + text + "}";
+                    ",\"h\":" + h + ",\"conf\":" + confidence + ",\"text\":\"" + text + "\"}";
 
           if (i <= boxes->n - 2) {
               result += ",";
